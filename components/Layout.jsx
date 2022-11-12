@@ -6,7 +6,7 @@ export default function Layout({ pageTitle, children }) {
   return (
     <>
       <Head>
-        <title>{pageTitle ? pageTitle : "Walcome to online getget shop"}</title>
+        <title>{pageTitle ? pageTitle : "Welcome To Gadget Zone"}</title>
       </Head>
       <Navbar></Navbar>
       <main>{children}</main>

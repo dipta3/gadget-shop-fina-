@@ -16,6 +16,7 @@ import {
 } from "react-social-login-buttons";
 import axios from "axios";
 import { contextStore } from "../utils/Store";
+import Gohome from "./Gohome";
 export default function SignIn({ urlPath, children }) {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
@@ -51,35 +52,25 @@ export default function SignIn({ urlPath, children }) {
   };
 
   return (
-    <Container sx={{ marginTop: "30px" }}>
+    <Container sx={{ marginTop: "3px"}}>
+      <Gohome></Gohome>
       <Paper
         variant="outlined"
         sx={{
-          width: { xs: "100%", sm: "90%", md: "50%", margin: "auto" },
+          borderRadius:"20px",
+          background:"#e8f5e9",
+          width: { marginTop: "15px", xs: "100%", sm: "90%", md: "50%", margin: "auto" },
         }}
       >
         <LinearProgress sx={{ display: showLoading ? "block" : "none" }} />
 
         <form onSubmit={handleSubmit}>
           <Stack spacing={2} p={2}>
-            <Typography variant="bold" component={"h2"} align="center">
-              Signin
+            <Typography variant="bold" component={"h2"} align="center"
+            >
+              SignIn
             </Typography>
-            {/* <Stack spacing={1}>
-              <GoogleLoginButton
-                style={{ background: "#E2AD15", color: "white" }}
-                onClick={loginWithGoogle}
-              >
-                <span>Login</span>
-              </GoogleLoginButton>
-              <FacebookLoginButton onClick={() => alert("Hello")}>
-                <span>Login</span>
-              </FacebookLoginButton>
-            </Stack>
-
-            <Typography variant="bold" component={"h2"} align="center">
-              OR
-            </Typography> */}
+            
             <Typography component={"span"} align="center" sx={{ color: "red" }}>
               {err ? err : null}
             </Typography>
@@ -108,17 +99,19 @@ export default function SignIn({ urlPath, children }) {
             <Button
               variant="outlined"
               fullWidth
-              sx={{ background: "#0A1929", color: "#F2D000" }}
+              sx={{ background: "#AFE1AF", color: "black" }}
               type="submit"
             >
-              Signin
+              Sign In
             </Button>
             <Typography component={"p"}>
-              Login as admin email:mahbub@gmail.com pass:123456
+              Login as admin Email:diptabiswas79@gmail.com Pass:123456
             </Typography>
             <Typography component={"span"}>
               Are you new?
-              <Link href={"/register"} passHref>
+              <Link href={"/register"} passHref
+             
+              >
                 <a> Create a account</a>
               </Link>
             </Typography>
