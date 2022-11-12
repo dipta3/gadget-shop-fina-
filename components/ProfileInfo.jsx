@@ -177,7 +177,7 @@ export default function ProfileInfo() {
               variant="outlined"
               sx={{ color: "red" }}
             >
-              Cancle
+              Cancel
             </Button>
             <Button type="submit" variant="outlined">
               Change Password

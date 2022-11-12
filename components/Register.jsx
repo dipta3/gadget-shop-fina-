@@ -12,6 +12,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState, useContext } from "react";
 import { contextStore } from "../utils/Store";
+import Gohome from "./Gohome";
 export default function SignUp() {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -50,10 +51,13 @@ export default function SignUp() {
   };
 
   return (
-    <Container sx={{ marginTop: "30px" }}>
+    <Container sx={{ marginTop: "3px" }}>
+      <Gohome></Gohome>
       <Paper
         variant="outlined"
         sx={{
+          borderRadius:"20px",
+          background:"#e8f5e9",
           width: { xs: "100%", sm: "90%", md: "50%", margin: "auto" },
         }}
       >
@@ -61,7 +65,7 @@ export default function SignUp() {
         <form onSubmit={handleSubmit}>
           <Stack spacing={2} p={3}>
             <Typography variant="bold" component={"h1"} align="center">
-              Signup
+              Sign Up
             </Typography>
             <Typography component={"span"} align="center" sx={{ color: "red" }}>
               {msg ? msg : null}
@@ -114,15 +118,15 @@ export default function SignUp() {
             <Button
               variant="outlined"
               fullWidth
-              sx={{ background: "#0A1929", color: "#F2D000" }}
+              sx={{ background: "#AFE1AF", color: "black" }}
               type="submit"
             >
-              Singup
+              Sing Up
             </Button>
             <Typography component={"span"}>
               Already have an account?
               <Link href={"/login"} passHref>
-                <a> Signin</a>
+                <a> Sign In</a>
               </Link>
             </Typography>
           </Stack>

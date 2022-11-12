@@ -6,12 +6,14 @@ export default function MobileStore() {
   const iOSUrl = "https://itunes.apple.com/us/app";
   return (
     <Box>
-      <Typography variant="bold" component={"h2"}>
-        Download Mpbile App
+      <Typography variant="bold" component={"h2"}
+      sx={{background: "#bdbdbd" }}
+      >
+        Download App
       </Typography>
-      <Paper sx={{padding:"10px"}}>
+      <Paper  elevation={0} sx={{padding:"2x" ,background: "#bdbdbd"}}>
         <MobileStoreButton
-          height={100}
+          height={110}
           width={200}
           store="android"
           url={androidUrl}

@@ -57,8 +57,7 @@ export default function ShippingAddress({ urlPath, children }) {
           onChange={(e) => setCountry(e.target.value)}
         >
           <MenuItem value={"Bangladesh"}>Bangladesh</MenuItem>
-          <MenuItem value={"India"}>India</MenuItem>
-          <MenuItem value={"China"}>China</MenuItem>
+          
         </Select>
       </FormControl>
       <PhoneInput

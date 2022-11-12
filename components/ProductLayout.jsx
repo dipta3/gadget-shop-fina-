@@ -145,26 +145,6 @@ export default function ProductLayout({ data }) {
                 <ListItemButton>
                   <ListItemIcon>
                     <Checkbox
-                      onChange={() => filterProducts("infinix")}
-                    ></Checkbox>
-                  </ListItemIcon>
-                  <ListItemText>Infinix</ListItemText>
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <Checkbox
-                      onChange={() => filterProducts("tecno")}
-                    ></Checkbox>
-                  </ListItemIcon>
-                  <ListItemText>Tecno</ListItemText>
-                </ListItemButton>
-              </ListItem>
-              <ListItem disablePadding>
-                <ListItemButton>
-                  <ListItemIcon>
-                    <Checkbox
                       onChange={() => filterProducts("sony")}
                     ></Checkbox>
                   </ListItemIcon>
@@ -247,10 +227,6 @@ export default function ProductLayout({ data }) {
             </Grid>
           </Box>
         </Stack>
-        <Typography variant="bold" component="h1" textAlign="center" py="40px">
-        <Wave text="New Collections" effect="stretch" effectChange={2} />
-        </Typography>
-        <ProductSlider></ProductSlider>
       </Container>
       <Divider sx={{marginTop:"200px"}}></Divider>
       <Footer></Footer>

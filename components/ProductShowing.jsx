@@ -27,7 +27,7 @@ export default function ProductShowing({ product }) {
   return (
     <>
       <Grid item width={"280px"}>
-        <Card variant="outlined" sx={{ background: "#ECECEE" }}>
+        <Card variant="outlined" sx={{ background: "#b3e5fc", borderRadius:"15px" }}>
           <NextLink href={`/products/${product.slug}`} passHref>
             <CardActionArea>
               <Image
@@ -41,10 +41,14 @@ export default function ProductShowing({ product }) {
           </NextLink>
 
           <CardContent>
-            <Typography component={"p"}>{product.name} </Typography>
-            <Typography component={"span"}>Price:{product.price}tk</Typography>
+            <Typography
+            sx={{fontWeight: 'bold'}}
+            component={"p"}>{product.name} </Typography>
+            <Typography 
+             sx={{color:'#f85606'}}
+            component={"span"}><b>৳{product.price} </b> </Typography>
             <Typography component={"span"}>
-              {"  "}Reviews({product.numOfReviews})
+              {"  "} Reviews({product.numOfReviews})
             </Typography>
             <Rating name="no-value" value={product.rating} />
           </CardContent>
@@ -53,7 +57,7 @@ export default function ProductShowing({ product }) {
               variant="outlined"
               size="small"
               fullWidth
-              sx={{ background: "#0A1929", color: "#F2D000" }}
+              sx={{ background: "#AFE1AF", color: "white" }}
               onClick={() =>
                 AddToCart({
                   name: product.name,
@@ -76,7 +80,7 @@ export default function ProductShowing({ product }) {
       >
         <Alert
           severity="success"
-          sx={{ width: "100%", background: "#0A1929", color: "#F2D000" }}
+          sx={{ width: "100%", background: "#AFE1AF", color: "white" }}
         >
           Added to your cart!
         </Alert>

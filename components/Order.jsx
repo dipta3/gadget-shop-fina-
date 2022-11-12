@@ -29,6 +29,7 @@ export default function Order() {
   useEffect(() => {
     if (!myOrders) {
       getMyOrders();
+      
     }
   });
 

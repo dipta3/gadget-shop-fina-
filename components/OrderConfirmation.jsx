@@ -7,7 +7,7 @@ export default function ConfirmOrder() {
         <Stack spacing={3}>
           <Alert severity="success">
             <AlertTitle>Success</AlertTitle>
-            Your order hase been created successfully. —{" "}
+            Your order has been created successfully. —{" "}
             <strong>Thank you!</strong>
           </Alert>
         </Stack>
