@@ -5,8 +5,8 @@ export default function Footer() {
   const currentYear = date.getFullYear();
 
   return (
-    <div style={{ background: "#F5F5F7" ,padding:"10px",textAlign:"center"}}>
-      Copyright © {currentYear} Online Getget Shop. All rights reserved.
+    <div style={{ background: "#9e9e9e" ,padding:"10px",textAlign:"center"}}>
+      Copyright © {currentYear} Online Gadget Zone. All rights reserved.
     </div>
   );
 }

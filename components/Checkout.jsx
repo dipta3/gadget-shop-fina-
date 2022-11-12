@@ -33,6 +33,7 @@ import OtpInput from "react-otp-input";
 import { useUserAuth } from "../utils/useAuthContext";
 import axios from "axios";
 import { contextStore } from "../utils/Store";
+import Gohome from "./Gohome";
 export default function Checkout() {
   const [activeStep, setActiveStep] = useState();
   const [confirmation, setConfirmation] = useState(false);
@@ -142,15 +143,22 @@ export default function Checkout() {
 
   return (
     <Container
+    
       sx={{
+       
+       
         marginTop: "20px",
-        marginBottom: "20px",
+        marginBottom: "50px",
         width: { xs: "100%", sm: "95%", md: "50%" },
       }}
     >
+      <Gohome></Gohome>
       <Paper
         variant="outlined"
         sx={{
+          borderRadius:"20px",
+          background:"#e8f5e9",
+          paddingBottom: "20px",
           padding: { xs: "4px", sm: "6px", md: "10px" },
         }}
       >
@@ -203,8 +211,7 @@ export default function Checkout() {
                       onChange={(e) => setCountry(e.target.value)}
                     >
                       <MenuItem value={"Bangladesh"}>Bangladesh</MenuItem>
-                      <MenuItem value={"India"}>India</MenuItem>
-                      <MenuItem value={"China"}>China</MenuItem>
+                      
                     </Select>
                   </FormControl>
                   <PhoneInput
@@ -219,7 +226,7 @@ export default function Checkout() {
                   <Button
                     disabled={!address || !city || !country || !phone}
                     onClick={() => setActiveStep(1)}
-                    sx={{ background: "#FFDA00", color: "#000000" }}
+                    sx={{ background: "#AFE1AF", color: "black" }}
                     variant="outlined"
                     type="button"
                   >
@@ -243,7 +250,7 @@ export default function Checkout() {
                     onChange={(e) => setSelectedPaymentM(e.target.value)}
                   >
                     <MenuItem value={"cod"}>Cash on Delivery</MenuItem>
-                    <MenuItem value={"ssl"}>SSL Payment</MenuItem>
+                   
                   </Select>
                 </FormControl>
 
@@ -261,7 +268,7 @@ export default function Checkout() {
                 <Stack direction="row" spacing={1}>
                   <Button
                     onClick={() => setActiveStep(0)}
-                    sx={{ background: "#FFDA00", color: "#000000" }}
+                    sx={{ background: "#AFE1AF", color: "black" }}
                     variant="outlined"
                     type="b"
                   >
@@ -270,7 +277,7 @@ export default function Checkout() {
                   <Button
                     disabled={!selectedPaymentM}
                     onClick={() => setActiveStep(2)}
-                    sx={{ background: "#FFDA00", color: "#000000" }}
+                    sx={{ background: "#AFE1AF", color: "black" }}
                     variant="outlined"
                     type="button"
                   >
@@ -331,7 +338,7 @@ export default function Checkout() {
                 <Stack direction="row" spacing={1}>
                   <Button
                     onClick={() => setActiveStep(1)}
-                    sx={{ background: "#FFDA00", color: "#000000" }}
+                    sx={{ background: "#AFE1AF", color: "black" }}
                     variant="outlined"
                     type="button"
                   >
@@ -339,7 +346,7 @@ export default function Checkout() {
                   </Button>
                   {selectedPaymentM === "ssl" ? (
                     <Button
-                      sx={{ background: "#FFDA00", color: "#000000" }}
+                      sx={{ background: "#AFE1AF", color: "black" }}
                       variant="outlined"
                       type="button"
                       disabled={!confirmation}
@@ -349,7 +356,7 @@ export default function Checkout() {
                     </Button>
                   ) : (
                     <Button
-                      sx={{ background: "#FFDA00", color: "#000000" }}
+                      sx={{ background: "#AFE1AF", color: "black" }}
                       variant="outlined"
                       type="button"
                       disabled={!confirmation}
