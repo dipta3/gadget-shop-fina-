@@ -416,8 +416,7 @@ export default function Checkout() {
             <Typography color="red">{error ? error : null}</Typography>
             <Button
               sx={{
-                background: "#FFDA00",
-                color: "#000000",
+                background: "#AFE1AF", color: "black",
                 width: "50%",
                 margin: "auto",
               }}

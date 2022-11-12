@@ -83,7 +83,7 @@ function Navbar() {
                 <Button
                   variant="outlined"
                   type="submit"
-                  sx={{ background: "#AFE1AF", color: "White" }}
+                  sx={{ background: "#AFE1AF", color: "black" }}
                 >
                   Search
                 </Button>

@@ -105,16 +105,15 @@ export default function AddProduct() {
                 >
                   <MenuItem value={"apple"}>Apple</MenuItem>
                   <MenuItem value={"samsung"}>Samsung</MenuItem>
+                  <MenuItem value={"oppo"}>Oppo</MenuItem>
                   <MenuItem value={"xiaomi"}>Xiaomi</MenuItem>
                   <MenuItem value={"nokia"}>Nokia</MenuItem>
                   <MenuItem value={"realme"}>Realme</MenuItem>
-                  <MenuItem value={"infinix"}>Infinix</MenuItem>
-                  <MenuItem value={"tecno"}>Tecno</MenuItem>
-                  <MenuItem value={"walton"}>Walton</MenuItem>
+
                   <MenuItem value={"sony"}>Sony</MenuItem>
                   <MenuItem value={"oneplus"}>Oneplus</MenuItem>
-                  <MenuItem value={"motorola"}>Motorola</MenuItem>
-                  <MenuItem value={"oppo"}>Oppo</MenuItem>
+
+
                 </Select>
               </FormControl>
               <FormControl sx={{ width: "50%" }}>
@@ -130,8 +129,7 @@ export default function AddProduct() {
                   <MenuItem value={"mobile"}>Mobile</MenuItem>
                   <MenuItem value={"desktop"}>Desktop</MenuItem>
                   <MenuItem value={"laptop"}>Laptop</MenuItem>
-                  <MenuItem value={"tablat"}>Tablat</MenuItem>
-                  <MenuItem value={"accessory"}>Accessory</MenuItem>
+                  <MenuItem value={"accessory"}>Accessories</MenuItem>
                 </Select>
               </FormControl>
             </Stack>
@@ -186,7 +184,7 @@ export default function AddProduct() {
             <Button
               variant="outlined"
               fullWidth
-              sx={{ background: "#0A1929", color: "#F2D000" }}
+              sx={{ background: "#AFE1AF", color: "black" }}
               type="submit"
             >
               {showLoading ? <CircularProgress size={30} /> : "add"}

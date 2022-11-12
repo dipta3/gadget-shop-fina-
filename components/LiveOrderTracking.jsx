@@ -9,10 +9,12 @@ import {
   Typography,
 } from "@mui/material";
 import React from "react";
+import GoHome from "./Gohome";
 
 export default function LiveOrderTracking({ orderId, activeStep }) {
   return (
     <Container sx={{ marginBottom: "30px" }}>
+      <GoHome></GoHome>
       <Stack spacing={3}>
         <Typography component={"h3"}>
           <strong>Order ID: </strong>
