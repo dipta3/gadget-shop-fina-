@@ -14,6 +14,7 @@ import {
   ListItem,
   Button,
 } from "@mui/material";
+import logo from "../public/img/logo.png";
 import { useRouter } from "next/router";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -23,6 +24,7 @@ import { contextStore } from "../utils/Store";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import NavItems from "./NavItems";
+import Image from "next/image";
 function Navbar() {
   const [show, setShow] = useState(false);
   const [search, setSearch] = useState();
@@ -44,14 +46,15 @@ function Navbar() {
               variant="bold"
               component={"span"}
               sx={{
-                fontSize: "35px",
-                display: { xs: "none", sm: "none", md: "block" },
-                paddingLeft: "60px",
-                textShadow: "2px 3px",
+                padding:'10px'
               }}
-              color="black"
+              
             >
-              <span style={{ color: "#FDAF0F" }}>GADGET</span>SHOP
+               <Link href={"/"} passHref>
+               <a><Image src={logo}  width={180}
+              height={100} alt="" quality={100} /></a>
+              </Link>
+             
             </Typography>
           </Box>
           <Box
@@ -72,7 +75,7 @@ function Navbar() {
                   variant="outlined"
                   size="small"
                   value={search}
-                  label={"Search your products..."}
+                  label={"Search Your Products"}
                   placeholder={"Search by product name"}
                   onChange={(e) => setSearch(e.target.value)}
                 />
@@ -80,7 +83,7 @@ function Navbar() {
                 <Button
                   variant="outlined"
                   type="submit"
-                  sx={{ background: "#FFDA00", color: "#000000" }}
+                  sx={{ background: "#AFE1AF", color: "White" }}
                 >
                   Search
                 </Button>
@@ -93,7 +96,7 @@ function Navbar() {
                 <a>
                   <Badge badgeContent={cartQty} color="secondary" showZero>
                     <ShoppingCartIcon
-                      sx={{ color: "gray" }}
+                      sx={{ color: "#AFE1AF" }}
                       fontSize="large"
                     ></ShoppingCartIcon>
                   </Badge>
@@ -105,7 +108,7 @@ function Navbar() {
                 <Link href={"/your-profile"} passHref>
                   <a>
                     <AccountCircleIcon
-                      sx={{ color: "gray" }}
+                      sx={{ color: "#AFE1AF" }}
                       fontSize="large"
                     ></AccountCircleIcon>
                   </a>
@@ -114,7 +117,7 @@ function Navbar() {
                 <Link href={"/login"} passHref>
                   <a>
                     <LoginIcon
-                      sx={{ color: "gray" }}
+                      sx={{ color: "#AFE1AF" }}
                       fontSize="large"
                     ></LoginIcon>
                   </a>
@@ -127,16 +130,16 @@ function Navbar() {
       <AppBar
         position="sticky"
         sx={{
-          backgroundColor: "#CB5455",
+          backgroundColor: "#AFE1AF",
           boxShadow: "none",
-          borderBottom: "3px solid #FFDA00",
+          borderBottom: "3px solid #03B0D6",
         }}
       >
         <Toolbar>
           <IconButton
             onClick={() => setShow(!show)}
             sx={{
-              display: { xs: "block", sm: "block", md: "none", lg: "none" },
+              display: { xs: "block", sm: "block", md: "block", lg: "block" },
             }}
           >
             <MenuIcon></MenuIcon>
@@ -154,7 +157,6 @@ function Navbar() {
             }}
             color="black"
           >
-            <span style={{ color: "#FDAF0F" }}>GADGET</span>SHOP
           </Typography>
           <Box sx={{ display: { xs: "bloc", sm: "none", marginLeft: "auto" } }}>
             <IconButton>
@@ -163,7 +165,7 @@ function Navbar() {
                   <Badge badgeContent={cartQty} color="secondary" showZero>
                     <ShoppingCartIcon
                       sx={{ color: "white" }}
-                      fontSize="dedium"
+                      fontSize="medium"
                     ></ShoppingCartIcon>
                   </Badge>
                 </a>
@@ -175,7 +177,7 @@ function Navbar() {
                   <a>
                     <AccountCircleIcon
                       sx={{ color: "white" }}
-                      fontSize="dedium"
+                      fontSize="medium"
                     ></AccountCircleIcon>
                   </a>
                 </Link>
@@ -184,7 +186,7 @@ function Navbar() {
                   <a>
                     <LoginIcon
                       sx={{ color: "white" }}
-                      fontSize="dedium"
+                      fontSize="medium"
                     ></LoginIcon>
                   </a>
                 </Link>
@@ -257,7 +259,7 @@ function Navbar() {
                       : "gray",
                 }}
               >
-                ACCESSORY
+                ACCESSORIES
               </a>
             </Link>
           </ListItem>
