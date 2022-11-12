@@ -7,16 +7,18 @@ export default function NavItems() {
   return (
     <Stack
       direction="row"
-      spacing={2}
+      spacing={3}
+      align="center"
       sx={{
-        display: { xs: "none", sm: "none", md: "block", lg: "block" },
+        
+        display: {textAlign: 'center', xs: "none", sm: "none", md: "block", lg: "block" },
       }}
     >
       <Link href={"/"} passHref>
         <a
           style={{
             textDecoration: "none",
-            color: router.asPath === "/" ? "#000000" : "white",
+            color: router.asPath === "/" ? "#03B0D6" : "white",
           }}
         >
           HOME
@@ -27,10 +29,10 @@ export default function NavItems() {
         <a
           style={{
             textDecoration: "none",
-            color: router.asPath === "/products/mobile" ? "#000000" : "white",
+            color: router.asPath === "/products/mobile" ? "#03B0D6" : "white",
           }}
         >
-          MOBILE
+          PHONE
         </a>
       </Link>
 
@@ -38,7 +40,7 @@ export default function NavItems() {
         <a
           style={{
             textDecoration: "none",
-            color: router.asPath === "/products/desktop" ? "#000000" : "white",
+            color: router.asPath === "/products/desktop" ? "#03B0D6" : "white",
           }}
         >
           DESKTOP
@@ -49,20 +51,10 @@ export default function NavItems() {
         <a
           style={{
             textDecoration: "none",
-            color: router.asPath === "/products/laptop" ? "#000000" : "white",
+            color: router.asPath === "/products/laptop" ? "#03B0D6" : "white",
           }}
         >
           LAPTOP
-        </a>
-      </Link>
-      <Link href={"/products/tablet"} passHref>
-        <a
-          style={{
-            textDecoration: "none",
-            color: router.asPath === "/products/tablet" ? "#000000" : "white",
-          }}
-        >
-          TABLAT
         </a>
       </Link>
       <Link href={"/products/accessory"} passHref>
@@ -70,10 +62,10 @@ export default function NavItems() {
           style={{
             textDecoration: "none",
             color:
-              router.asPath === "/products/accessory" ? "#000000" : "white",
+              router.asPath === "/products/accessory" ? "#03B0D6" : "white",
           }}
         >
-          ACCESSORY
+          ACCESSORIES
         </a>
       </Link>
     </Stack>
