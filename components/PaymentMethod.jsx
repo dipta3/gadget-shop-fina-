@@ -20,11 +20,7 @@ export default function PaymentMethod() {
         value="ssl"
         onChange={() => setSelectedPaymentM("ssl")}
       />
-        <label htmlFor="ssl">SSL Payment</label>
-      <Typography sx={{ display: selectedPaymentM ? "block" : "none",color:"green" }}>
-        You have selected{" "}
-        {selectedPaymentM === "ssl" ? "SSL Payment Method" : "Cash on Delivery Method"}
-      </Typography>
+      
     </>
   );
 }

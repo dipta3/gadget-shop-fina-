@@ -191,7 +191,7 @@ function Cart() {
               <ListItem>
                 <Button
                   disabled={deliveryCharcg ? false : true}
-                  sx={{ background: "#AFE1AF", color: "#03B0D6" }}
+                  sx={{ background: "#AFE1AF", color: "black" }}
                   fullWidth
                   variant="outlined"
                   onClick={cartToCheckout}

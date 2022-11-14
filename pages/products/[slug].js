@@ -27,6 +27,7 @@ import { Wave } from "react-animated-text";
 import { useLocalStorage } from "@rehooks/local-storage";
 import { contextStore } from "../../utils/Store";
 import { useRouter } from "next/router";
+import Gohome from "../../components/Gohome";
 export default function Slug({ product }) {
   const [showSnkber, setShowSnkber] = useState(false);
   const [show, setShow] = useState(false);
@@ -69,7 +70,8 @@ export default function Slug({ product }) {
     setShowSnkber(true);
   };
   return (
-    <Container sx={{ marginTop: "40px", marginBottom: "25px" }}>
+    <Container sx={{ marginTop: "3px", marginBottom: "25px", borderRadius: "20px", background: "#e8f5e9", }}>
+      <Gohome></Gohome>
       <Grid container spacing={2}>
         <Grid
           item
@@ -96,13 +98,19 @@ export default function Slug({ product }) {
               <List dense={true}>
                 <ListItem>
                   <ListItemText>
-                    <strong>Name:</strong> {product.name}
+                    <b>Name: </b>
+                    <Typography component={"span"} color="#01579B">
+                      {product.name}
+                    </Typography>
                   </ListItemText>
                 </ListItem>
                 <ListItem>
                   <ListItemText>
                     {" "}
-                    <strong>Price:</strong> {"$" + product.price}
+                    <strong>Price: </strong>
+                    <Typography component={"span"} color="#f85606">
+                      {"$" + product.price}
+                    </Typography>
                   </ListItemText>
                 </ListItem>
                 <ListItem>
@@ -123,13 +131,17 @@ export default function Slug({ product }) {
                 <ListItem>
                   <ListItemText>
                     {" "}
-                    <strong>Description:</strong> {product.des}
+                    <strong>Description: </strong>
+                    <Typography component={"span"} color="#01579B">
+                      {product.des}
+                    </Typography>
                   </ListItemText>
                 </ListItem>
                 <ListItem>
                   <ListItemText>
+                    <strong>Rating:</strong>
                     <Typography component={"span"}>
-                      <strong>Rating:</strong> <Rating value={product.rating} />
+                      <Rating value={product.rating} />
                     </Typography>
                   </ListItemText>
                 </ListItem>
@@ -138,7 +150,7 @@ export default function Slug({ product }) {
             <CardActions>
               {product.stock > 0 ? (
                 <Button
-                  sx={{ background: "#FFDA00", color: "#000000" }}
+                  sx={{ background: "#AFE1AF", color: "black" }}
                   fullWidth
                   variant="outlined"
                   onClick={() =>
@@ -161,7 +173,7 @@ export default function Slug({ product }) {
                 </Alert>
               )}
               <Button
-                sx={{ background: "#FFDA00", color: "#000000" }}
+                sx={{ background: "#AFE1AF", color: "black" }}
                 fullWidth
                 variant="outlined"
                 onClick={() => router.push("/your-cart")}
@@ -189,8 +201,7 @@ export default function Slug({ product }) {
           sx={{
             display: show ? "none" : "block",
             width: { xs: "100%", sm: "70%", md: "30%" },
-            background: "#FFDA00",
-            color: "#000000",
+            background: "#AFE1AF", color: "black"
           }}
           variant="outlined"
           onClick={() => setShow(true)}
@@ -200,10 +211,10 @@ export default function Slug({ product }) {
       </Stack>
 
       <Stack spacing={2} sx={{ display: show ? "block" : "none" }} paddingY={8}>
-        <Typography component="legend">Give Ratting</Typography>
+        <Typography component="legend"><b>Give Ratings</b></Typography>
         <Rating value={rating} onChange={(e) => setRating(e.target.value)} />
         {rating}
-        <Typography component="legend">Add a comment</Typography>
+        <Typography component="legend"><b>Add a comment</b></Typography>
         <TextField
           label="Comment"
           multiline
@@ -221,7 +232,7 @@ export default function Slug({ product }) {
 
         <ButtonGroup disableElevation variant="contained">
           <Button color="error" type="button" onClick={() => setShow(false)}>
-            Cancle
+            Cancel
           </Button>
           <Button
             type="button"
