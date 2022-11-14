@@ -185,8 +185,8 @@ export default function Slug({ product }) {
         </Grid>
       </Grid>
       <Stack spacing={3} paddingTop={15}>
-        <Typography variant="bold" component="h1" textAlign="center" py="40px">
-          <Wave text="Ratting and Reviews" effect="stretch" effectChange={2} />
+        <Typography variant="bold" component="h1" textAlign="center" py="40px" color="#2E7D32">
+          RATINGS AND REVIEWS
         </Typography>
         {product.reviews.map((review) => (
           <Paper key={review._id} variant="outlined" sx={{ padding: "10px" }}>
