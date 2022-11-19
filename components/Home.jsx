@@ -122,7 +122,7 @@ export default function Home() {
               textAlign="center"
               py="40px"
             >
-              Why Choice Us
+              We Provide
             </Typography>
             <Grid container gap={"200px"} justifyContent={"center"}>
               <Grid
