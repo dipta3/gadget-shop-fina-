@@ -20,7 +20,7 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 import TextTransition, { presets } from "react-text-transition";
 import ProductSlider from "../components/ProductSlider";
 import Image from "next/image";
-import { Wave } from "react-animated-text";
+
 import banner from "../public/img/banner.jpg";
 import sp from "../public/img/sp.png";
 import fd from "../public/img/fd.png";

@@ -8,14 +8,11 @@ const GoHome = () => {
     
    
        <div style={{textAlign:"center"}}>
-        <Link href={"/"}>
-        <Image src={logo}
-            alt="Home"
-            align="center"
-            width={200}
-            height={100}
-            quality={100}  />
-        </Link>
+        
+        <Link href={"/"} passHref>
+               <a><Image src={logo}  width={200}
+              height={100} alt="" quality={100} /></a>
+              </Link>
        </div>
         
        

@@ -8,10 +8,12 @@ export default function NavItems() {
     <Stack
       direction="row"
       spacing={3}
-      align="center"
+      
+      
+      
       sx={{
         
-        display: {textAlign: 'center', xs: "none", sm: "none", md: "block", lg: "block" },
+        display: {textAlign: 'center', xs: "none", sm: "none", md: "block", lg: "block",justifyContent: 'flex-end' },
       }}
     >
       <Link href={"/"} passHref>
