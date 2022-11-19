@@ -90,7 +90,7 @@ export default function Home() {
               placeContent: "center",
               width: "50%",
               background: "#AFE1AF",
-              borderTopLeftRadius: "200%",
+              borderRadius: "120%",
             }}
           >
             <Image
