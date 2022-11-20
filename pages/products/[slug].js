@@ -70,7 +70,7 @@ export default function Slug({ product }) {
     setShowSnkber(true);
   };
   return (
-    <Container sx={{ marginTop: "3px", marginBottom: "25px", borderRadius: "20px", background: "#e8f5e9", }}>
+    <Container sx={{ marginTop: "20px", marginBottom: "25px", borderRadius: "20px", background: "#e8f5e9", }}>
       <Gohome></Gohome>
       <Grid container spacing={2}>
         <Grid
@@ -138,12 +138,7 @@ export default function Slug({ product }) {
                   </ListItemText>
                 </ListItem>
                 <ListItem>
-                  <ListItemText>
-                    <strong>Rating:</strong>
-                    <Typography component={"span"}>
-                      <Rating value={product.rating} />
-                    </Typography>
-                  </ListItemText>
+
                 </ListItem>
               </List>
             </CardContent>
