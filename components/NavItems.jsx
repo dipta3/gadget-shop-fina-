@@ -13,7 +13,7 @@ export default function NavItems() {
       
       sx={{
         
-        display: {textAlign: 'center', xs: "none", sm: "none", md: "block", lg: "block",justifyContent: 'flex-end' },
+        display: {textAlign: 'center', xs: "none", sm: "none", md: "block", lg: "block" },
       }}
     >
       <Link href={"/"} passHref>

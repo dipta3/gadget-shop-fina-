@@ -64,8 +64,8 @@ export default function SignUp() {
         <LinearProgress sx={{ display: showLoading ? "block" : "none" }} />
         <form onSubmit={handleSubmit}>
           <Stack spacing={2} p={3}>
-            <Typography variant="bold" component={"h1"} align="center">
-              Sign Up
+            <Typography fontSize="2.2rem" align="center">
+              <b>Sign</b> Up
             </Typography>
             <Typography component={"span"} align="center" sx={{ color: "red" }}>
               {msg ? msg : null}
@@ -121,12 +121,13 @@ export default function SignUp() {
               sx={{ background: "#AFE1AF", color: "black" }}
               type="submit"
             >
-              Sing Up
+              Sign Up
             </Button>
-            <Typography component={"span"}>
+            <Typography component={"span"}
+            >
               Already have an account?
               <Link href={"/login"} passHref>
-                <a> Sign In</a>
+                LogIn
               </Link>
             </Typography>
           </Stack>

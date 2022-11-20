@@ -66,9 +66,10 @@ export default function SignIn({ urlPath, children }) {
 
         <form onSubmit={handleSubmit}>
           <Stack spacing={2} p={2}>
-            <Typography variant="bold" component={"h2"} align="center"
+            <Typography fontSize="2.2rem" align="center"
+            
             >
-              SignIn
+              <b> Log</b> In
             </Typography>
             
             <Typography component={"span"} align="center" sx={{ color: "red" }}>
@@ -102,17 +103,17 @@ export default function SignIn({ urlPath, children }) {
               sx={{ background: "#AFE1AF", color: "black" }}
               type="submit"
             >
-              Sign In
+              Log In
             </Button>
             <Typography component={"p"}>
               Login as admin Email:diptabiswas79@gmail.com Pass:123456
             </Typography>
             <Typography component={"span"}>
-              Are you new?
+              New to this site?
               <Link href={"/register"} passHref
              
               >
-                <a> Create a account</a>
+                 SignUp
               </Link>
             </Typography>
           </Stack>
