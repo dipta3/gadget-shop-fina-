@@ -36,10 +36,10 @@ export default function ProductSlider() {
       ssr={false} // means to render carousel on server-side.
       infinite={true}
       autoPlay={true}
-      autoPlaySpeed={5000}
+      autoPlaySpeed={1000}
       keyBoardControl={true}
-      customTransition="all 5"
-      transitionDuration={5000}
+      customTransition="all .5"
+      transitionDuration={500}
       removeArrowOnDeviceType={["tablet", "mobile"]}
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
