@@ -13,9 +13,14 @@ import GoHome from "./Gohome";
 
 export default function LiveOrderTracking({ orderId, activeStep }) {
   return (
-    <Container sx={{ marginBottom: "30px" }}>
+    <Container align="center" sx={{ marginBottom: "30px" }}>
       <GoHome></GoHome>
-      <Stack spacing={3}>
+      <Stack spacing={3}
+      sx={{
+        
+        background:"#e8f5e9",
+        width: { marginTop: "15px", xs: "100%", sm: "90%", md: "50%", margin: "auto" },
+      }}>
         <Typography component={"h3"}>
           <strong>Order ID: </strong>
           {orderId ? orderId : null}
@@ -26,7 +31,7 @@ export default function LiveOrderTracking({ orderId, activeStep }) {
         >
           Order Live Tracking
         </Typography>
-        <Stepper activeStep={activeStep ? activeStep : 0}>
+        <Stepper align="center" activeStep={activeStep ? activeStep : 0}>
           <Step>
             <StepLabel>Processing</StepLabel>
           </Step>

@@ -31,7 +31,7 @@ export default function OrderId({ order }) {
     router.push("/your-profile");
   };
   return (
-    <Container sx={{ margin: "30px" }}>
+    <Container align="center" sx={{ marginTop: "30px" }}>
       {myOrder ? (
         <Stack spacing={2}>
           <LiveOrderTracking
@@ -40,8 +40,8 @@ export default function OrderId({ order }) {
               myOrder.orderStatus === "Processing"
                 ? 0
                 : myOrder.orderStatus === "On the way"
-                ? 1
-                : 3
+                  ? 1
+                  : 3
             }
           ></LiveOrderTracking>
 
@@ -64,21 +64,21 @@ export default function OrderId({ order }) {
                 <TableBody>
                   {myOrder.orderItems
                     ? myOrder.orderItems.map((product) => (
-                        <TableRow key={product._id}>
-                          <TableCell>
-                            <Image
-                              src={product.img}
-                              alt={product.name}
-                              height={50}
-                              width={50}
-                              quantity={100}
-                            />
-                          </TableCell>
-                          <TableCell>{product.name}</TableCell>
-                          <TableCell>{product.price}</TableCell>
-                          <TableCell>{product.qty}</TableCell>
-                        </TableRow>
-                      ))
+                      <TableRow key={product._id}>
+                        <TableCell>
+                          <Image
+                            src={product.img}
+                            alt={product.name}
+                            height={50}
+                            width={50}
+                            quantity={100}
+                          />
+                        </TableCell>
+                        <TableCell>{product.name}</TableCell>
+                        <TableCell>{product.price}</TableCell>
+                        <TableCell>{product.qty}</TableCell>
+                      </TableRow>
+                    ))
                     : null}
                 </TableBody>
               </Table>
