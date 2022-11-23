@@ -106,7 +106,7 @@ export default function SignIn({ urlPath, children }) {
               Log In
             </Button>
             <Typography component={"p"}>
-              Login as admin Email:diptabiswas79@gmail.com Pass:123456
+              
             </Typography>
             <Typography component={"span"}>
               New to this site?
