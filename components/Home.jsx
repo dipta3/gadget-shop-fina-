@@ -211,8 +211,8 @@ export default function Home() {
               >
                 <Typography align="center">
                 If your product is damaged, defective, incorrect or incomplete at the time of delivery, please raise a return request on GadgetZone website. Return request must be raised within 14 days for GadgetZone items, or within 7 days for items from the date of delivery.
-For electronic appliances & mobile phones related issues after usage or after the return policy period, please check if the product is covered under seller warranty or brand warranty. For more information on warranty claims, please view our Warranty Policy.
-For selected categories, we accept a change of mind. Please refer to the section below on Return Policy per Category for more information.
+                For electronic appliances & mobile phones related issues after usage or after the return policy period, please check if the product is covered under seller warranty or brand warranty. For more information on warranty claims, please view our Warranty Policy.
+                For selected categories, we accept a change of mind. Please refer to the section below on Return Policy per Category for more information.
                 </Typography>
               </Grid>
               <Grid
