@@ -215,7 +215,7 @@ export default function ProductLayout({ data }) {
               sx={{ marginTop: "20px" }}
             >
               {products ? (
-                products.map((product) => (
+                products?.map((product) => (
                   <ProductShowing
                     key={product._id}
                     product={product}

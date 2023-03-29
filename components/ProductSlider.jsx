@@ -44,9 +44,10 @@ export default function ProductSlider() {
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
     >
-      {data.map((product) => (
+      {
+      data?.map(product => 
         <ProductShowing key={product._id} product={product}></ProductShowing>
-      ))}
+      )}
     </Carousel>
   );
 }
